@@ -1,0 +1,8 @@
+# Démarrer le moteur de ré-écriture d'URI.
+RewriteEngine on
+# Ne pas rediriger les requêtes vers /assets.
+RewriteRule ^assets/(.*)$ assets/$1 [L]
+# Ne pas rediriger favicon.ico
+RewriteRule ^favicon.ico$ favicon.ico [L]
+# Rediriger toutes les autres requêtes vers le contrôleur frontal.
+RewriteRule ^.*$ index.php

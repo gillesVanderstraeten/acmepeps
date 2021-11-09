@@ -1,0 +1,70 @@
+[
+	{
+		"verb": "GET",
+		"uri": "/",
+		"method": "ProductController.list"
+	},
+	{
+		"verb": "GET",
+		"uri": "/product/list",
+		"method": "ProductController.list"
+	},
+	{
+		"verb": "GET",
+		"uri": "/product/show/([1-9][0-9]*)",
+		"method": "ProductController.show",
+		"params": [
+			"idProduct"
+		]
+	},
+	{
+		"verb": "GET",
+		"uri": "/user/signin",
+		"method": "UserController.signin"
+	},
+	{
+		"verb": "POST",
+		"uri": "/user/login",
+		"method": "UserController.login"
+	},
+	{
+		"verb": "GET",
+		"uri": "/user/logout",
+		"method": "UserController.logout"
+	},
+	{
+		"verb": "GET",
+		"uri": "/product/create/([1-9][0-9]*)",
+		"method": "ProductController.create",
+		"params": [
+			"idCategory"
+		]
+	},
+	{
+		"verb": "GET",
+		"uri": "/product/update/([1-9][0-9]*)",
+		"method": "ProductController.update",
+		"params": [
+			"idProduct"
+		]
+	},
+	{
+		"verb": "POST",
+		"uri": "/product/save",
+		"method": "ProductController.save"
+	},
+	{
+		"verb": "GET",
+		"uri": "/product/delete/([1-9][0-9]*)/(all|img)",
+		"method": "ProductController.delete",
+		"params": [
+			"idProduct",
+			"mode"
+		]
+	},
+	{
+		"verb": "GET",
+		"uri": "/test",
+		"method": "TestController.test"
+	}
+]

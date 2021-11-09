@@ -1,0 +1,236 @@
+/* Copyright (c) 2020-2022 Gilles VANDERSTRAETEN gillesvds@adok.info */
+@charset "utf-8";
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+	color: #333;
+}
+
+table {
+	margin: 20px 10px 10px 10px;
+	border-collapse: collapse;
+	border: solid 2px;
+}
+
+th, td {
+	padding: 10px;
+	border: solid 1px;
+}
+
+tr td:last-child {
+	text-align: end;
+}
+
+header {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 80px;
+	box-shadow: 0 30px 30px #FFF;
+	background-color: #333;
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-position-x: 100px;
+}
+
+header .user {
+	left: 320px;
+	top: 30px;
+	font-size: 20px;
+	color: #FFF;
+}
+
+header a {
+	color: #FFF;
+}
+
+footer {
+	width: 100%;
+	height: 80px;
+	margin: 130px 0 0 0;
+	background-color: #555;
+	border-top: solid 5px #333;
+	text-align: center;
+	line-height: 80px;
+	font-size: 12px;
+	color: #DDD;
+}
+
+footer:after {
+	content: "© ACME";
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: #F00;
+}
+
+input, select, button {
+	margin: 5px;
+	padding: 2px;
+	font-size: 16px;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+input[type="submit"], button[type="submit"] {
+	font-weight: bold;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: calc(344px * 3);
+	top: 100px;
+	margin: auto;
+}
+
+main>.category {
+	width: 100%;
+	margin: 20px 10px 15px 10px;
+	font-size: 32px;
+}
+
+main>.category .ico {
+	left: -45px;
+	top: 2px;
+}
+
+main>.category:hover .ico {
+	opacity: 1;
+}
+
+img.ico, a.ico img {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	opacity: 0;
+	transition: .2s;
+}
+
+img.ico:hover, a.ico img:hover {
+	width: 36px;
+	height: 36px;
+}
+
+.blockProduct {
+	margin: 0 10px 20px 10px;
+	padding: 10px;
+	border-radius: 5px;
+	border: solid 2px #DDD;
+}
+
+.blockProduct a.ico {
+	position: absolute;
+}
+
+.blockProduct:hover img.ico, .blockProduct:hover a.ico img {
+	opacity: 1;
+}
+
+.blockProduct a.update {
+	left: 5px;
+	top: 5px;
+}
+
+.blockProduct img.delete {
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+}
+
+.blockProduct img.deleteImg {
+	right: 5px;
+	top: 50px;
+	cursor: pointer;
+}
+
+.blockProduct .thumbnail {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+.blockProduct .name {
+	text-align: center;
+	font-size: 24px;
+}
+
+#detailProduct {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px 10px 10px 10px;
+}
+
+#detailProduct img {
+	margin: 0 100px 0 0;
+	width: 450px;
+	height: 450px;
+	object-fit: contain;
+}
+
+#detailProduct .price {
+	margin: 30px 0;
+	text-align: end;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+#detailProduct .ref, #detailProduct .category {
+	margin: 10px 0;
+	text-align: end;
+	font-size: 20px;
+}
+
+#detailProduct .ref:first-line, #detailProduct .category:first-line {
+	font-variant: all-petite-caps;
+	text-align: end;
+	font-size: 25px;
+}
+
+form {
+	width: 50%;
+	margin: 20px 10px 10px 0;
+}
+
+form div.item {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+
+form label {
+	min-width: 150px;
+	margin: 5px;
+	padding: 2px;
+	font-weight: bold;
+}
+
+#thumbnail {
+	display: flex;
+	width: 300px;
+	height: 300px;
+	padding: 3px;
+	border: dashed 2px #ccc;
+	align-items: center;
+	justify-content: center;
+}
+
+#thumbnail img {
+	max-width: 300px;
+	max-height: 300px;
+}
+
+.error {
+	width: 100%;
+	margin: 0 0 0 10px;
+	color: red;
+}
